@@ -1,0 +1,9 @@
+".\Objects\main.obj",
+".\Objects\Delay.obj",
+".\Objects\IndeKey.obj",
+".\Objects\Nixie.obj",
+".\Objects\Buzzer.obj",
+".\Objects\MatrixKey.obj",
+".\Objects\Timer0_Init.obj" 
+TO ".\Objects\Project" 
+PRINT(".\Listings\Project.m51") RAMSIZE(256) 
