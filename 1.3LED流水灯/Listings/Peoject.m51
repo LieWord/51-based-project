@@ -1,0 +1,110 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        08/16/2025  10:59:33  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\LEARNING PROGRAMS\KIEL5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\Peoject PRINT (.\Listings\Peoject.m51) RAMSI
+>> ZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  E:\LEARNING PROGRAMS\KIEL5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\Peoject (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0026H     UNIT         ?PR?LED?MAIN
+            CODE    0029H     0014H     UNIT         ?PR?_DELAY1MS?MAIN
+            CODE    003DH     000CH     UNIT         ?C_C51STARTUP
+            CODE    0049H     0005H     UNIT         ?PR?MAIN?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Peoject (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?LED?MAIN
+
+?PR?LED?MAIN
+  +--> ?PR?_DELAY1MS?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Peoject (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  C:0029H         PUBLIC        _Delay1ms
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/16/2025  10:59:33  PAGE 2
+
+
+  C:0049H         PUBLIC        main
+  C:0003H         PUBLIC        LED
+  -------         PROC          _DELAY1MS
+  D:0006H         SYMBOL        t
+  -------         DO            
+  D:0005H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0029H         LINE#         4
+  C:0029H         LINE#         5
+  C:0029H         LINE#         7
+  C:002DH         LINE#         8
+  C:002DH         LINE#         9
+  C:002FH         LINE#         10
+  C:0031H         LINE#         12
+  C:0031H         LINE#         13
+  C:0033H         LINE#         14
+  C:0035H         LINE#         15
+  C:003AH         LINE#         16
+  C:003CH         LINE#         18
+  -------         ENDPROC       _DELAY1MS
+  -------         PROC          LED
+  -------         DO            
+  D:0002H         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         45
+  C:0003H         LINE#         46
+  C:0003H         LINE#         47
+  C:0006H         LINE#         48
+  C:0006H         LINE#         49
+  C:0006H         LINE#         50
+  C:0016H         LINE#         51
+  C:001DH         LINE#         52
+  C:0028H         LINE#         53
+  -------         ENDPROC       LED
+  -------         PROC          MAIN
+  C:0049H         LINE#         55
+  C:0049H         LINE#         56
+  C:0049H         LINE#         57
+  C:0049H         LINE#         58
+  C:004CH         LINE#         59
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+Program Size: data=9.0 xdata=0 code=78
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
