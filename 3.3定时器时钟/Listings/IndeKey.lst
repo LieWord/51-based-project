@@ -1,0 +1,36 @@
+C51 COMPILER V9.54   INDEKEY                                                               08/17/2025 20:57:10 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE INDEKEY
+OBJECT MODULE PLACED IN .\Objects\IndeKey.obj
+COMPILER INVOKED BY: E:\Learning Programs\kiel5\C51\BIN\C51.EXE IndeKey.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PR
+                    -INT(.\Listings\IndeKey.lst) TABS(2) OBJECT(.\Objects\IndeKey.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "Delay.h"
+   3          
+   4          unsigned char IndeKey(){
+   5   1        unsigned char IndeKeyNumber=0;
+   6   1        if(P3_1==0){Delay(20);while(P3_1==0);Delay(20);IndeKeyNumber=1;}
+   7   1        if(P3_0==0){Delay(20);while(P3_0==0);Delay(20);IndeKeyNumber=2;}
+   8   1        if(P3_2==0){Delay(20);while(P3_2==0);Delay(20);IndeKeyNumber=3;}
+   9   1        if(P3_3==0){Delay(20);while(P3_3==0);Delay(20);IndeKeyNumber=4;}
+  10   1      
+  11   1        return IndeKeyNumber;
+  12   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     97    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
